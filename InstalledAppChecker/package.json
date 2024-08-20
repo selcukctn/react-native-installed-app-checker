@@ -1,0 +1,17 @@
+{
+  "name": "react-native-installed-app-checker",
+  "version": "1.0.3",
+  "description": "A React Native module to check if an app is installed",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-native"
+  ],
+  "author": "Harun Selçuk Çetin",
+  "license": "MIT",
+  "peerDependencies": {
+    "react-native": "^0.73.5"
+  }
+}

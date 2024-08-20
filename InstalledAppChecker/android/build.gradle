@@ -1,0 +1,35 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.4.0' // Güncel Gradle eklentisi sürümünü kullanın
+    }
+}
+
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 33 // Güncel SDK sürümünü kullanın
+    buildToolsVersion "33.0.2" // Güncel Build Tools sürümünü kullanın
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 33 // Güncel SDK sürümünü kullanın
+        versionCode 1
+        versionName "1.0"
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+repositories {
+    mavenCentral()
+    google() // Google Maven deposunu ekleyin
+}
+
+dependencies {
+    implementation 'com.facebook.react:react-native:+'
+}
