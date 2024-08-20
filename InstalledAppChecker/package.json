@@ -1,6 +1,6 @@
 {
   "name": "react-native-installed-app-checker",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A React Native module to check if an app is installed",
   "main": "index.js",
   "scripts": {

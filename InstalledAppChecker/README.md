@@ -7,7 +7,7 @@
 Use the package manager [npm](https://www.npmjs.com/package/react-native-installed-app-checker) to install react-native-installed-app-checker.
 
 ```bash
-npm install react-native-installed-app-checker@1.0.3
+npm install react-native-installed-app-checker@1.0.4
 ```
 ## Android Specific Setup
 

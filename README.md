@@ -7,7 +7,7 @@
 Use the package manager [npm](https://www.npmjs.com/package/react-native-installed-app-checker) to install react-native-installed-app-checker.
 
 ```bash
-npm install react-native-installed-app-checker
+npm install react-native-installed-app-checker@1.0.4
 ```
 ## Android Specific Setup
 
@@ -24,24 +24,35 @@ Starting with Android 11 (API level 30), Google has introduced additional restri
 ## Usage
 
 ```javascript
-import MyReactNativeModule from 'react-native-installed-app-checker';
+import React from 'react';
+import { View, Button, Alert } from 'react-native';
+import RNInstalledAppChecker from 'react-native-installed-app-checker';
 
-MyReactNativeModule.isAppInstalled('com.example.otherapp')
-  .then((isInstalled) => {
-    if (isInstalled) {
-      console.log('App is installed');
-    } else {
-      console.log('App is not installed');
-    }
-  })
-  .catch((error) => {
-    console.error(error);
-  });
+const App = () => {
+  const checkAppInstalled = (packageName) => {
+    RNInstalledAppChecker.isAppInstalled(packageName, (isInstalled) => {
+      if (isInstalled) {
+        Alert.alert('App Installed', `${packageName} is installed.`);
+      } else {
+        Alert.alert('App Not Found', `${packageName} is not installed.`);
+      }
+    });
+  };
+
+  return (
+    <View style={{ padding: 20 }}>
+      <Button title="Check App Installation" onPress={() => checkAppInstalled('com.example.otherapp')} />
+    </View>
+  );
+};
+
+export default App;
+
 
 ```
 
 ## Contributing
-
+- **GitHub:** [https://github.com/selcukctn](https://github.com/selcukctn/react-native-installed-app-checker)
 Pull requests are welcome. For major changes, please open an issue first
 to discuss what you would like to change.
 
